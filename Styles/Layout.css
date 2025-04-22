@@ -1,0 +1,24 @@
+body {
+    background-image: url("../Home.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  
+  .main-box {
+    background-color: rgb(255, 252, 252);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    margin-top: 2rem;
+  }
+
+  

@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submarines Are Larger then we Think</title>
+  <link rel="stylesheet" href="../Styles/Styles.css">
+  <a href="Home.html"><strong>Back to Home</strong></a>
+  <script type="module" src="https://10ay.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+
+</head>
+<body>
+  <div id="top">
+    <h2>Submarines Are Larger Than You Think</h2>
+    <p>During the cold war, due to the pressure of war the United States and the Soviet Union were in a secret technology war. One that pushed the limited of human creation. This caused things like these massive sumbmarines to be created.</p>
+
+    <p>We see in the movies that they're these tiny iron toobs that can have maybe 5 people in them and even then the crew is sitting shoulder to shoulder.</p>
+    <h2>These are some facts about Submarines</h2>
+    <ol>
+      <li>
+         <ul>What they hold:
+          <li>People (sometimes over 150 crew members!)</li>
+          <li>Food and supplies for months</li>
+          <li>Missiles and torpedoes(up to 24 huge nuclear missiles)</li>
+        </ul>
+      </li>
+      <li>They are designed to survive deep underwater. They are extremely silent and go undetected. </li>
+      <li>There are 485 active submarines.</li>
+      <li>We don't full know what many of the submarines do. Not all of them are for holding missles. Some gather technology from other countries, others are for researching the bottem of the ocean.</li>
+    </ol>
+
+    <h2>What They Look Like</h2>
+    <img src="https://i.ytimg.com/vi/ETI8p1-TUyk/maxresdefault.jpg" alt="Submarine" width="400">
+
+    <h2>Watch This!</h2>
+    <iframe width="420" height="315" src="https://www.youtube.com/watch?v=AecFpnj383A" frameborder="0"></iframe>
+
+    <h2>Heres an example of how technology is improving!</h2>
+
+
+    <tableau-viz 
+      id="tableau-viz"
+      src="https://10ay.online.tableau.com/t/gagebclark-4e6d9aa5dd/views/WorldIndicators/Technology"
+      width="100%" 
+      height="600" 
+      toolbar="bottom">
+    </tableau-viz>
+
+    <h2>Guess the Submarine Size!</h2>
+<p style="color:blue">Can you guess how long the biggest submarine is? (in feet)</p>
+<input type="number" id="guess" placeholder="Enter your guess">
+<button onclick="checkGuess()">Submit</button>
+<p id="feedback"></p>
+
+<p style="text-align: center;">
+    <a href="#top">Back to Top</a>
+  </p>
+  
+<br><br>
+
+
+
+<script>
+  function checkGuess() {
+    const guess = parseInt(document.getElementById("guess").value);
+    const actual = 574; // Typhoon-class submarine length in feet
+    const tolerance = 25;
+    const feedback = document.getElementById("feedback");
+
+    if (isNaN(guess)) {
+      feedback.innerText = "Please enter a number!";
+      return;
+    }
+
+    const difference = Math.abs(guess - actual);
+
+    if (difference <= tolerance) {
+      feedback.innerText = "Nice! You’re really close — the Typhoon-class submarine is 574 feet long!";
+    } else if (guess > actual) {
+      feedback.innerText = "A bit too high. Try again!";
+    } else {
+      feedback.innerText = "A bit too low. Try again!";
+    }
+  }
+</script>
+
+
+
+
+
+</body>
+</html>
